@@ -1,10 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def current_response(t, alpha, R, L, omega0, N=10000):
+def current_response(t, alpha, R, L, omega0, N=1000):
     a0 = 10 * alpha
-    i_t = 0
-
+    i_t = (a0 / R) * (1 - np.exp(-R * t / L))
+    
     for n in range(1, N+1):
         theta = np.arctan(n * omega0 * L / R)
         an = (10 * np.sin(2 * np.pi * n * alpha)) / (np.pi * n)
@@ -12,11 +12,11 @@ def current_response(t, alpha, R, L, omega0, N=10000):
         phi = np.arctan2(bn , an)
         magnitude = np.sqrt(an**2 + bn**2) / np.sqrt(R**2 + (n * omega0 * L)**2)
         phase = n * omega0 * t - phi - theta
-        decay_term = np.exp(-R * t / L) * np.cos(phi + theta) / np.sqrt(R**2 + (n * omega0 * L)**2)
-        i_t += magnitude * np.cos(phase) - decay_term
+        decay_term = np.exp(-R * t / L) * np.cos(n * omega0 * 0 - phi - theta) / np.sqrt(R**2 + (n * omega0 * L)**2)
 
-    i_t += (a0/R)*(1 - np.e**(-R * t / L))
+        i_t += magnitude * (np.cos(n * omega0 * t - phi - theta) - np.exp(-R * t / L) * np.cos(phi + theta))
 
+    
     return i_t
 
 # Parameters
@@ -35,4 +35,5 @@ plt.plot(t_values, i_values, color='blue')
 plt.xlabel("Time (t)")
 plt.ylabel("Current i(t)")
 plt.grid(True)
-plt.savefig('analytical_sol.pdf')
+plt.savefig('3_plot.png')
+plt.show()
