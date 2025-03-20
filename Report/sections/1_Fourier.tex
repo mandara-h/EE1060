@@ -28,8 +28,8 @@ C_k = \frac{1}{T} \int_{0}^{T} f(x) e^{-j \frac{2\pi k}{T} x} \, dx \label{1}
 The Fourier series can also be written (for real signals) in terms of sinusoidal terms as:
 \begin{equation}
 \begin{split}
-f(x) &= a_0 + \sum_{n=1}^{\infty} \left[ a_n \cos\left(\frac{2\pi n}{T} x \right) \right. \\
-&+ \sum_{n=1}^{\infty} \left[ b_n \sin\left(\frac{2\pi n}{T} x \right) \right]
+f(x) &= a_0 + \sum_{n=1}^{\infty} \left[ a_n \cos\left(\frac{2\pi k}{T} x \right) \right. \\
+&+ \sum_{n=1}^{\infty} \left[ b_n \sin\left(\frac{2\pi k}{T} x \right) \right]
 \end{split}
 \end{equation}
 where the coefficients are given by:
@@ -69,7 +69,7 @@ T, & \text{if } m = n \\
 0, & \text{if } m \neq n
 \end{cases}
 \]
-Thus, the complex exponentials \( e^{j \frac{2\pi n}{T} x} \) form an \textbf{orthonormal basis} in the space of periodic functions.
+Thus, the complex exponentials \( e^{j \frac{2\pi k}{T} x} \) form an \textbf{orthonormal basis} in the space of periodic functions.
 
 \subsection{Fourier Series Representation of the Given Square Input Wave}
 Substituting the value of $f(x)$ in (\ref{1}) and computing $C_k$, we get:
