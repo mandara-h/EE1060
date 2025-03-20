@@ -10,7 +10,7 @@
 \subsection{Trapezoidal Rule}
 For a differential equation $$\frac{dy}{dx} = f(x,y)$$ whose solution is $y(x)$, the update equation for trapezoidal method is given by:
 \begin{align}
-    y_{n+1} = y_n + \frac{h}{2}\left[ f(x_n,y_n) + f(x_{n+1},_{n+1}) \right]
+    y_{n+1} = y_n + \frac{h}{2}\left[ f(x_n,y_n) + f(x_{n+1},y_{n+1}) \right]
 \end{align}
 \subsection{Derivation of Update Equation}
 To solve the differential equation numerically using the trapezoidal method, we discretize it as:
