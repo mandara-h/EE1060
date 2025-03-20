@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {6}Analysis of the Response}{12}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Case I: $T=\tau $}{12}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Case II: $T>\tau $}{12}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Case III: $T<\tau $}{12}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.3}Case III: $T<\tau $}{13}{subsection.6.3}%
 \contentsline {section}{\numberline {7}Fourier Analysis of Current}{14}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Fourier Transform and Frequency Spectrum}{14}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Dominant Frequency}{14}{subsection.7.2}%

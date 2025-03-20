@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.8)  20 MAR 2025 12:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.8)  20 MAR 2025 13:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -832,50 +832,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--24
 
  []
 
+<sections/case1a.png, id=383, 680.5425pt x 526.96875pt>
+File: sections/case1a.png Graphic file (type png)
+<use sections/case1a.png>
+Package pdftex.def Info: sections/case1a.png  used on input line 27.
+(pdftex.def)             Requested size: 232.84843pt x 180.30077pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 26.
+(hyperref)                removing `math shift' on input line 31.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\tau' on input line 26.
+(hyperref)                removing `\tau' on input line 31.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 26.
+(hyperref)                removing `math shift' on input line 31.
 
-<sections/6_case2.png, id=383, 639.13782pt x 408.77719pt>
+<sections/6_case2.png, id=384, 639.13782pt x 408.77719pt>
 File: sections/6_case2.png Graphic file (type png)
 <use sections/6_case2.png>
-Package pdftex.def Info: sections/6_case2.png  used on input line 35.
+Package pdftex.def Info: sections/6_case2.png  used on input line 40.
 (pdftex.def)             Requested size: 232.84843pt x 148.92487pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
+Underfull \hbox (badness 10000) in paragraph at lines 37--42
 
  []
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 39.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\tau' on input line 39.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 39.
-
-<sections/6_case3.png, id=384, 652.68843pt x 408.02437pt>
-File: sections/6_case3.png Graphic file (type png)
-<use sections/6_case3.png>
-Package pdftex.def Info: sections/6_case3.png  used on input line 49.
-(pdftex.def)             Requested size: 232.84843pt x 145.56253pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--51
-
- []
-
+<sections/case3a.png, id=385, 689.57625pt x 526.96875pt>
+File: sections/case3a.png Graphic file (type png)
+<use sections/case3a.png>
+Package pdftex.def Info: sections/case3a.png  used on input line 45.
+(pdftex.def)             Requested size: 232.84843pt x 177.93674pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -889,14 +877,41 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.52 \end{multicols}
-                    
+l.48 
+     
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.52 \end{multicols}
-                     <./sections/6_case1.png> <./sections/6_case2.png>]
+l.48 
+      <./sections/6_case1.png> <./sections/case1a.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 49.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tau' on input line 49.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 49.
+
+<sections/6_case3.png, id=401, 652.68843pt x 408.02437pt>
+File: sections/6_case3.png Graphic file (type png)
+<use sections/6_case3.png>
+Package pdftex.def Info: sections/6_case3.png  used on input line 59.
+(pdftex.def)             Requested size: 232.84843pt x 145.56253pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--61
+
+ []
+
+<sections/case2a.png, id=402, 702.625pt x 526.96875pt>
+File: sections/case2a.png Graphic file (type png)
+<use sections/case2a.png>
+Package pdftex.def Info: sections/case2a.png  used on input line 64.
+(pdftex.def)             Requested size: 232.84843pt x 174.63194pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -910,21 +925,40 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.56 \newpage
-              <./sections/6_case3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
+l.72 \newpage
+             
+pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.72 \newpage
+             
+pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.72 \newpage
+             
+pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.72 \newpage
+              <./sections/6_case2.png> <./sections/case3a.png> <./sections/6_ca
+se3.png> <./sections/case2a.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
 []\OT1/cmr/bx/n/14.4 Why Dom-i-nant Fre-
  []
 
-<sections/dominantfreq.png, id=412, 617.9085pt x 323.7696pt>
+<sections/dominantfreq.png, id=418, 722.7pt x 361.35pt>
 File: sections/dominantfreq.png Graphic file (type png)
 <use sections/dominantfreq.png>
-Package pdftex.def Info: sections/dominantfreq.png  used on input line 109.
-(pdftex.def)             Requested size: 232.84843pt x 122.00613pt.
-<sections/fourier_transform.png, id=413, 617.9085pt x 339.669pt>
+Package pdftex.def Info: sections/dominantfreq.png  used on input line 125.
+(pdftex.def)             Requested size: 232.84843pt x 116.42282pt.
+<sections/fourier_transform.png, id=419, 617.9085pt x 339.669pt>
 File: sections/fourier_transform.png Graphic file (type png)
 <use sections/fourier_transform.png>
-Package pdftex.def Info: sections/fourier_transform.png  used on input line 114
+Package pdftex.def Info: sections/fourier_transform.png  used on input line 130
 .
 (pdftex.def)             Requested size: 232.84843pt x 127.99751pt.
 
@@ -945,13 +979,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [15
-pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
+pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.1 \newpage
             
-pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
+pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -988,10 +1022,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 695861938EA0FFF2F3DE6ECBE819E2F9;7129.
  ) 
 Here is how much of TeX's memory you used:
- 13809 strings out of 474222
- 209287 string characters out of 5748734
+ 13833 strings out of 474222
+ 209857 string characters out of 5748734
  2181975 words of memory out of 5000000
- 35661 multiletter control sequences out of 15000+600000
+ 35682 multiletter control sequences out of 15000+600000
  568512 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,19n,93p,646b,1464s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1011,10 +1045,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/tex
 mf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (17 pages, 790695 bytes).
+Output written on main.pdf (17 pages, 963096 bytes).
 PDF statistics:
- 573 PDF objects out of 1000 (max. 8388607)
- 489 compressed objects within 5 object streams
- 194 named destinations out of 1000 (max. 500000)
- 338 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 579 PDF objects out of 1000 (max. 8388607)
+ 492 compressed objects within 5 object streams
+ 197 named destinations out of 1000 (max. 500000)
+ 353 words of extra memory for PDF output out of 10000 (max. 10000000)
 
