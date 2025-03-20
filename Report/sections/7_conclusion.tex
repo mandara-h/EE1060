@@ -1,0 +1,29 @@
+\newpage
+{\color{gray}\hrule}
+\begin{center}
+\section{Summary and Conclusion}
+\bigskip
+\end{center}
+{\color{gray}\hrule}
+\vspace{0.5cm}
+\begin{enumerate}
+    \item The given input wave has been successfully decomposed into its Fourier Series expression.
+\begin{equation*}
+v(t) = 10\alpha + \sum_{n=1}^{\infty} \Bigg[ \frac{10 \sin (2 \pi n \alpha)}{\pi n} \cos\left(\frac{2\pi n}{T} t \right) + \frac{10}{\pi n} (1 - \cos (2 \pi n \alpha)) \sin\left(\frac{2\pi n}{T} t \right) \Bigg]
+\end{equation*}
+    \item The differential equation was deduced, and it was used to solve for the current response of the $RL$ circuit analytically and via a numerical method (trapezoidal rule).
+\begin{align*}
+i(t) &= \frac{a_0}{R} \left(1-e^{\frac{-R}{L}t} \right) + \sum_{n=1}^{\infty} \Bigg( \frac{\sqrt{a_n^2+b_n^2}}{\sqrt{R^2+(n\omega_0L)^2}} \cos(n\omega_0t-\phi-\theta) - e^{\frac{-R}{L}t} \frac{\cos(\phi+\theta)}{\sqrt{R^2+(n\omega_0L)^2}} \Bigg)
+\end{align*}
+where
+\begin{align*}
+a_0&=10\alpha\\
+\phi &= \arctan{\frac{b_n}{a_n}}\\
+\theta&=tan^{-1}\left(\frac{n\omega_0L}{R}\right)\\
+a_n&=\frac{10 \sin 2 \pi n \alpha}{\pi n} \\
+b_n&=\left( \frac{10}{ \pi n} \right) (1 - \cos 2 \pi n \alpha)
+\end{align*}
+    \item Responses obtained through both methods were compared, and furthur analysis was done to understand the nature of the response and how it varies with $R$, $L$, and $\alpha$.
+    \item Finally, a Fourier analysis was done on the current response, and other related characteristics were explored.
+    \item Codes for all generated plots can be found at this \href{https://github.com/mandara-h/EE1060}{GitHub repository}.
+\end{enumerate}

@@ -1,0 +1,34 @@
+\contentsline {section}{\numberline {1}Decomposing the Input Wave Into Fourier Series}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Complex Exponential Form}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Trigonometric Form}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Orthogonality Property of Terms}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Fourier Series Representation of the Given Square Input Wave}{4}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Verification}{4}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Magnitude Spectrum of $C_k$}{4}{subsection.1.6}%
+\contentsline {section}{\numberline {2}Deducing the Differential Equation}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Defining the Square Wave}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}The Differential Equation for a Series RL Circuit}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Solving the Differential Equation}{6}{subsection.2.3}%
+\contentsline {section}{\numberline {3}The Analytical Solution}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Current Response of the Circuit for Individual Inputs}{7}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}For DC Voltage Input}{7}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}For AC Voltage Input}{7}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Combined Current Response (Exploiting Linearity Property)}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Visual Representation of the Response}{8}{subsection.3.3}%
+\contentsline {section}{\numberline {4}The Numerical Solution}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Trapezoidal Rule}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Derivation of Update Equation}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Why Trapezoidal?}{9}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The Code}{9}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Comparison of Solutions}{11}{section.5}%
+\contentsline {section}{\numberline {6}Analysis of the Response}{12}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Case I: $T=\tau $}{12}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Case II: $T>\tau $}{12}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Case III: $T<\tau $}{12}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Fourier Analysis of Current}{14}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Fourier Transform and Frequency Spectrum}{14}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Dominant Frequency}{14}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Impact of RL Circuit as Low-Pass Filter}{14}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Why Dominant Frequency is Lower for High-Frequency Input}{14}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Example: High-Frequency Square Wave Attenuation}{14}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Summary and Conclusion}{16}{section.8}%

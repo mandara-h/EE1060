@@ -1,0 +1,64 @@
+\newpage
+{\color{gray}\hrule}
+\begin{center}
+\section{Deducing the Differential Equation}
+\bigskip
+\end{center}
+{\color{gray}\hrule}
+\begin{multicols}{2}
+
+\subsection{Defining the Square Wave}
+The square wave \(v(t)\) alternates between two values, \(V_0\) and 0, with a period \(T\). The duty ratio \(\alpha\) determines the fraction of the period during which the voltage is \(V_0\). Specifically:
+\begin{itemize}
+    \item For \(0 \leq t < \alpha T\), \(v(t) = V_0\).
+    \item For \(\alpha T \leq t < T\), \(v(t) = 0\).
+\end{itemize}
+
+\subsection{The Differential Equation for a Series RL Circuit}
+The voltage across a series RL circuit is given by Kirchhoff's Loop Law as:
+\[
+v(t) = L \frac{di(t)}{dt} + R i(t)
+\]
+where \(i(t)\) is the current through the circuit.
+
+\subsection{Solving the Differential Equation}
+We need to solve this equation for two intervals:
+\begin{enumerate}
+    \item When \(v(t) = V_0=10\) (for \(0 \leq t < \alpha T\)):
+    \begin{align}
+        V_0 = L \frac{di(t)}{dt} + R i(t)\\
+        \implies\frac{di(t)}{dt}+\frac{R}{L}i(t) =\frac{10}{L}
+    \end{align}
+    Integrating Factor $= e^{\int \frac{R}{L}dt}\implies e^{\frac{Rt}{L}}$\\
+    Multiply both sides by the integrating factor and integrate.\\
+    \begin{align}
+        \int d(e^{\frac{Rt}{L}}i(t))&=\int e^{\frac{Rt}{L}}\frac{10}{L}dt\\
+        e^{\frac{Rt}{L}}i(t) &= \frac{10}{L}\frac{e^{\frac{Rt}{L}}}{\frac{R}{L}} + C
+    \end{align}
+    Divide both sides with $e^{\frac{Rt}{L}}$
+    \begin{align}
+        i(t)&=\frac{10}{R} +Ce^{-\frac{Rt}{L}} \label{eq5}
+    \end{align}
+    Apply initial condition  $i(0)$ at $t=0$\\
+    \begin{align}
+        i(0)&=\frac{10}{R} +C\\
+        C&=i(0)-\frac{10}{R} \label{eq7}
+    \end{align}
+    equation (\ref{eq7}) in (\ref{eq5}),
+    \begin{align}
+       i(t) &= \frac{10}{R} \left(1 - e^{-\frac{R}{L}t}\right) + i(0) e^{-\frac{R}{L}t}\\
+       \text{since $i(0)=0$}\\
+       i(t) &= \frac{10}{R} \left(1 - e^{-\frac{R}{L}t}\right)
+    \end{align}
+    \item When \(v(t) = 0\) (for \(\alpha T \leq t < T\)):
+    \begin{align}
+        0 = L \frac{di(t)}{dt} + R i(t)
+    \end{align}
+    The solution to this DE is:
+    \begin{align}
+        i(t) = i(\alpha T) e^{-\frac{R}{L}(t - \alpha T)}
+    \end{align}
+    where \(i(\alpha T)\) is the current at \(t = \alpha T\).
+\end{enumerate}
+
+\end{multicols}

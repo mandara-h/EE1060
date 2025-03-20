@@ -1,0 +1,90 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[super,square]{natbib}
+\usepackage{anysize}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\marginsize{2cm}{2cm}{1cm}{2cm}
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\usepackage{soul}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=CadetBlue,
+    filecolor=CadetBlue,      
+    urlcolor=CadetBlue,
+}
+\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{parskip}
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\footnotesize,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=false,
+  tabsize=4,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  captionpos=b,
+  backgroundcolor=\color{lightgray!10},
+  commentstyle=\color{green!60!black}\textit,
+  keywordstyle=\color{blue},
+  stringstyle=\color{red}
+}
+\setlength\columnsep{18pt}
+\renewenvironment{abstract}
+ {\par\noindent\textbf{\abstractname}\ \ignorespaces \\}
+ {\par\noindent\medskip}
+\renewcommand{\abstractname}{Question}
+ 
+\begin{document}
+\pagestyle{fancy}
+\thispagestyle{empty}
+\fancyhead[R]{\textit{EE1060 - Quiz 03}}
+\fancyhead[L]{}
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\begin{center}
+\Large{\textbf{EE1060 \\ Differential Equations And Transform Techniques \\ Quiz 03}}
+\vspace{0.4cm}
+\normalsize
+\\ Submission by Team 08 \\
+\vspace{0.1cm}
+\textit{IIT Hyderabad}
+\medskip
+\normalsize
+\end{center}
+{\color{gray}\hrule}
+\vspace{0.4cm}
+\begin{abstract}
+\input{./abstract.tex}
+\end{abstract}
+{\color{gray}\hrule}
+\medskip
+\input{./sections/1_Fourier.tex}
+\input{./sections/2_DE.tex}
+\input{./sections/3_analytical.tex}
+\input{./sections/4_numerical.tex}
+\input{./sections/5_comparison.tex}
+\input{./sections/6_analysis.tex}
+\input{./sections/7_conclusion.tex}
+
+\newpage
+\begin{thebibliography}{9}
+    \bibitem{latex1} Lectures of Differential Equations and Transform Techniques, EE1060 (Jan-May 2025)
+    \bibitem{latex2} Lectures of Circuits and Network Analysis, EE1101 (Jul-Nov 2024)
+    \bibitem{latex3} \href{https://homepage.math.uiowa.edu/~atkinson/papers/NAODE_Book.pdf}{Numerical Solution of Ordinary Differential Equations} by K. Atkinson, W. Han, and D. Stewart
+    \bibitem{latex4} \href{https://en.wikipedia.org/wiki/Trapezoidal_rule_(differential_equations)}{Wikipedia page} on using Trapezoidal Method to Solve Differential Equations
+    \bibitem{latex5} \href{https://books.google.co.in/books?id=7Zofw3SFTWIC&q=%22Trapezoidal+rule%22&redir_esc=y#v=snippet&q=%22Trapezoidal%20rule%22&f=false}{A First Course in the Numerical Analysis of Differential Equations} by Arieh Iserles
+    \bibitem{latex6} \href{https://www.cs.usask.ca/~spiteri/M314/notes/AP/chap3.pdf}{Lecture Notes} for the course M314 offered at University of Saskatchewan
+\end{thebibliography}
+\end{document}
