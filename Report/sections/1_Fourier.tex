@@ -17,11 +17,11 @@ To analyse the circuit response, we express the input signal using Fourier Serie
 \subsection{Complex Exponential Form}
 The Fourier series of a periodic function \( f(x) \) with period \( T \) can be expressed as:
 \begin{align}
-f(x) = \sum_{n=-\infty}^{\infty} c_n e^{j \frac{2\pi n}{T} x}  
+f(x) = \sum_{n=-\infty}^{\infty} C_k e^{j \frac{2\pi k}{T} x}  
 \end{align}
-where the Fourier coefficients \( c_n \) are given by:
+where the Fourier coefficients \( C_k \) are given by:
 \begin{align}
-c_n = \frac{1}{T} \int_{0}^{T} f(x) e^{-j \frac{2\pi n}{T} x} \, dx \label{1}
+C_k = \frac{1}{T} \int_{0}^{T} f(x) e^{-j \frac{2\pi k}{T} x} \, dx \label{1}
 \end{align}
 
 \subsection{Trigonometric Form}
@@ -37,21 +37,21 @@ where the coefficients are given by:
 a_0 = \frac{1}{T} \int_{0}^{T} f(x) \, dx \label{2}
 \end{align}
 \begin{align}
-a_n =c_n+c_{-n} = \frac{2}{T} \int_{0}^{T} f(x) \cos\left(\frac{2\pi n}{T} x \right) \, dx \label{3}
+	a_n =C_k+C_{-k} = \frac{2}{T} \int_{0}^{T} f(x) \cos\left(\frac{2\pi k}{T} x \right) \, dx \label{3} \text{for $n=k$}
 \end{align}
 \begin{align}
-b_n = j(c_n-c_{-n}) =\frac{2}{T} \int_{0}^{T} f(x) \sin\left(\frac{2\pi n}{T} x \right) \, dx \label{4}
+	b_n = j(C_k-C_{-k}) =\frac{2}{T} \int_{0}^{T} f(x) \sin\left(\frac{2\pi k}{T} x \right) \, dx \label{4} \text{for $n=k$}
 \end{align}
 We will use the notation $\omega_0$ to represent $\frac{2\pi}{T}$ going forward.
 
 \subsection{Orthogonality Property of Terms}
 Considering the complex form of Fourier series, the complex coefficients can be computed as:
 \begin{align}
-c_n = \frac{1}{T} \int_{0}^{T} f(x) e^{-j \frac{2\pi n}{T} x} \, dx 
+C_k = \frac{1}{T} \int_{0}^{T} f(x) e^{-j \frac{2\pi k}{T} x} \, dx 
 \end{align}
 In the complex Fourier series, the set of exponential functions:
 \[
-e^{j \frac{2\pi n}{T} x}, \quad n \in \mathbb{Z}
+e^{j \frac{2\pi k}{T} x}, \quad k \in \mathbb{Z}
 \]
 forms an orthogonal set over the interval \( [0, T] \) with respect to the inner product:
 \[
