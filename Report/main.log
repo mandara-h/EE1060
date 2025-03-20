@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.8)  20 MAR 2025 09:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.8)  20 MAR 2025 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -567,7 +567,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [2]
-Overfull \hbox (5.1705pt too wide) detected at line 44
+Overfull \hbox (45.22508pt too wide) detected at line 41
+[]
+ []
+
+
+Overfull \hbox (57.61685pt too wide) detected at line 44
 []
  []
 
@@ -1016,7 +1021,7 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/tex
 mf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (17 pages, 789068 bytes).
+Output written on main.pdf (17 pages, 789128 bytes).
 PDF statistics:
  570 PDF objects out of 1000 (max. 8388607)
  486 compressed objects within 5 object streams
