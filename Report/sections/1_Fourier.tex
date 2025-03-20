@@ -17,7 +17,7 @@ To analyse the circuit response, we express the input signal using Fourier Serie
 \subsection{Complex Exponential Form}
 The Fourier series of a periodic function \( f(x) \) with period \( T \) can be expressed as:
 \begin{align}
-f(x) = \sum_{n=-\infty}^{\infty} C_k e^{j \frac{2\pi k}{T} x}  
+f(x) = \sum_{k=-\infty}^{\infty} C_k e^{j \frac{2\pi k}{T} x}  
 \end{align}
 where the Fourier coefficients \( C_k \) are given by:
 \begin{align}
@@ -28,8 +28,8 @@ C_k = \frac{1}{T} \int_{0}^{T} f(x) e^{-j \frac{2\pi k}{T} x} \, dx \label{1}
 The Fourier series can also be written (for real signals) in terms of sinusoidal terms as:
 \begin{equation}
 \begin{split}
-f(x) &= a_0 + \sum_{n=1}^{\infty} \left[ a_n \cos\left(\frac{2\pi k}{T} x \right) \right. \\
-&+ \sum_{n=1}^{\infty} \left[ b_n \sin\left(\frac{2\pi k}{T} x \right) \right]
+f(x) &= a_0 + \sum_{n=k=1}^{\infty} \left[ a_n \cos\left(\frac{2\pi k}{T} x \right) \right. \\
+&+ \sum_{n=k=1}^{\infty} \left[ b_n \sin\left(\frac{2\pi k}{T} x \right) \right]
 \end{split}
 \end{equation}
 where the coefficients are given by:
@@ -37,10 +37,10 @@ where the coefficients are given by:
 a_0 = \frac{1}{T} \int_{0}^{T} f(x) \, dx \label{2}
 \end{align}
 \begin{align}
-	a_n =C_k+C_{-k} = \frac{2}{T} \int_{0}^{T} f(x) \cos\left(\frac{2\pi k}{T} x \right) \, dx \label{3} \text{for $n=k$}
+	a_n =C_k+C_{-k} = \frac{2}{T} \int_{0}^{T} f(x) \cos\left(\frac{2\pi k}{T} x \right) \, dx \label{3} \\ \text{for $n=k$}
 \end{align}
 \begin{align}
-	b_n = j(C_k-C_{-k}) =\frac{2}{T} \int_{0}^{T} f(x) \sin\left(\frac{2\pi k}{T} x \right) \, dx \label{4} \text{for $n=k$}
+	b_n = j(C_k-C_{-k}) =\frac{2}{T} \int_{0}^{T} f(x) \sin\left(\frac{2\pi k}{T} x \right) \, dx \label{4} \\ \text{for $n=k$}
 \end{align}
 We will use the notation $\omega_0$ to represent $\frac{2\pi}{T}$ going forward.
 
@@ -94,8 +94,8 @@ a_0 = C_0 &= \frac{1}{T} \int_{0}^{T} f(t) dt \\
 Therefore, the Fourier Series representation of the given input wave is given by: 
 \begin{equation}
 \begin{split}
-f(x) &= 10\alpha + \sum_{n=1}^{\infty} \Bigg[ \frac{10 \sin (2 \pi n \alpha)}{\pi n} \cos\left(\frac{2\pi n}{T} x \right) \\
-&+ \frac{10}{\pi n} (1 - \cos (2 \pi n \alpha)) \sin\left(\frac{2\pi n}{T} x \right) \Bigg]
+f(x) &= 10\alpha + \sum_{k=1}^{\infty} \Bigg[ \frac{10 \sin (2 \pi k \alpha)}{\pi k} \cos\left(\frac{2\pi k}{T} x \right) \\
+&+ \frac{10}{\pi k} (1 - \cos (2 \pi k \alpha)) \sin\left(\frac{2\pi k}{T} x \right) \Bigg]
 \end{split}
 \end{equation}
 
@@ -114,7 +114,7 @@ The magnitude spectrum is obtained by computing $|C_k|$ for different values of 
 \end{equation}
 The magnitude spectrum plots $|C_k|$ against $k$.
 
-for the given input wave, $|C_k|$ is 
+For the given input wave, $|C_k|$ is 
 \begin{equation}
     |C_k| =\frac{5}{\pi k}\left(\sqrt{2(1-cos(2\pi k\alpha)} \right)
 \end{equation}
