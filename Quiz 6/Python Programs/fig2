@@ -1,0 +1,35 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define time axis
+t = np.linspace(-10, 10, 2000)
+
+# Step function: u(t)
+f = np.where(t >= 0, 1, 0)
+
+# T values from your convolution code
+T_values = [0.1, 1, np.pi, 5, 10]
+colors = ['red', 'green', 'blue', 'orange', 'purple']
+
+plt.figure(figsize=(12, 8))
+
+# Plot the analytical output for each T
+for i, T in enumerate(T_values):
+    y = np.piecewise(
+        t,
+        [t < -T, (t >= -T) & (t < T), t >= T],
+        [0, lambda t: t + T, 2*T]
+    )
+    plt.plot(t, y, label=f'T = {T:.2f}', color=colors[i % len(colors)])
+
+# Plot the original step function
+plt.plot(t, f, 'k--', linewidth=1, label='Step Function u(t)')
+
+plt.title('Analytical Plot of Step Function Convolved with Rectangular Pulse')
+plt.xlabel('Time t')
+plt.ylabel('y(t)')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.savefig('fig3.png')
+plt.show()

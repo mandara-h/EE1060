@@ -1,0 +1,30 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import convolve
+
+dt = 0.01
+sigma = 1
+T_values = [0.1, 1, 2, 3.14, 10, 100]
+t = np.arange(-50, 50, dt)
+f = np.exp(-t**2 / (2 * sigma**2))
+
+plt.figure(figsize=(12, 6))
+
+for T in T_values:
+    h_t = np.arange(-T, T, dt)
+    h = np.ones_like(h_t)
+
+    y = convolve(f, h, mode='full') * dt
+    t_conv = np.arange(t[0] + h_t[0], t[-1] + h_t[-1], dt)
+
+
+    min_len = min(len(t_conv), len(y))
+    plt.plot(t_conv[:min_len], y[:min_len], label=f'T = {T}')
+
+plt.title('Convolution of Gaussian Input with Symmetric Rectangular Kernel')
+plt.xlabel('t')
+plt.ylabel('y(t)')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()

@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(-10, 10, 1000)
+t0 = 0
+T_vals = [1, 2, 3]
+
+f = np.zeros_like(t)
+f[np.abs(t - t0).argmin()] = 1
+
+plt.figure(figsize=(10, 6))
+for T in T_vals:
+    y = np.where((t > t0 - T) & (t < t0 + T), 1, 0)
+    plt.plot(t, y, label=f'T = {T}')
+
+plt.title('Effect of Varying T on Convolution Output')
+plt.xlabel('t')
+plt.ylabel('y(t)')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()

@@ -1,0 +1,30 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import convolve
+
+dt = 0.01
+t = np.arange(-50, 150, dt)
+f = np.sinc(t) 
+
+T_values = [0.1, 1, 2, 3.14, 10, 100]
+
+plt.figure(figsize=(12, 6))
+
+for T in T_values:
+    h_t = np.arange(0, 2*T, dt)     
+    h = np.ones_like(h_t)
+
+    y = convolve(f, h, mode='full') * dt
+    t_conv = np.arange(t[0] + h_t[0], t[0] + h_t[0] + dt * len(y), dt)
+
+    plt.plot(t_conv, y, label=f'$T = {T}$')
+
+plt.axvline(0, color='gray', linestyle='--', linewidth=1, label='t = 0')  
+plt.title('Causal Convolution of sinc(t) with Rectangular Kernel for Various T')
+plt.xlabel('t')
+plt.ylabel('y(t)')
+plt.grid(True)
+plt.legend()
+plt.xlim(-10, 50)  
+plt.tight_layout()
+plt.show()

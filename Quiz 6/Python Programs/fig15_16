@@ -1,0 +1,32 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+alpha = -1.0
+t_min, t_max, dt = -5, 10, 0.01
+t = np.arange(t_min, t_max, dt)
+f = np.exp(-alpha * t)
+
+def rectangular_kernel(T, dt):
+    width = int(2 * T / dt)
+    h = np.ones(width)
+    h /= np.sum(h)
+    t_h = np.linspace(-T, T, width)
+    return h, t_h
+
+T_values = [0.5, 1, 2]
+plt.figure(figsize=(10, 6))
+
+for T in T_values:
+    h, t_h = rectangular_kernel(T, dt)
+    analytical_y = (np.exp(-alpha * t) * (np.exp(alpha * T) - np.exp(-alpha * T))) / alpha
+    plt.plot(t, analytical_y, label=f'T = {T}')
+
+plt.plot(t, f, '--', label='Original $f(t)$', color='black', alpha=0.5)
+
+plt.title('Effect of Varying $T$ on Convolution $f(t) * h(t)$')
+plt.xlabel('Time (t)')
+plt.ylabel('Amplitude')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()

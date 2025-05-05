@@ -1,0 +1,25 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import convolve
+
+t = np.linspace(0, 20, 10000)
+dt = t[1] - t[0]
+alpha = 1
+
+f = np.exp(-alpha * t)
+
+T_values = [0.5, 1, 2]
+
+plt.figure(figsize=(10, 6))
+for T in T_values:
+    h = np.where((t >= 0) & (t <= T), 1.0, 0.0)
+    y = convolve(f, h, mode='same') * dt
+    plt.plot(t, y, label=f"T = {T}")
+
+plt.title(r"Convolution of $f(t) = e^{-\alpha t}$ with Causal Kernel")
+plt.xlabel("Time t")
+plt.ylabel("y(t)")
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()

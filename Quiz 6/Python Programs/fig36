@@ -1,0 +1,20 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(-10, 10, 1000)
+t0 = 2      
+T = 2       
+
+f = np.zeros_like(t)
+f[np.abs(t - t0).argmin()] = 1
+
+y = np.where((t > t0 - T) & (t < t0 + T), 1, 0)
+
+plt.plot(t, y, color='orange', label=r'$y(t) = \delta(t - t_0) * h(t)$')
+plt.title('Output of Convolution with Rectangular Kernel')
+plt.xlabel('t')
+plt.ylabel('y(t)')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()

@@ -1,0 +1,29 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(-5, 5, 1000)
+T = 1
+
+s_values = {
+    'Real s = -1': -1,
+    'Imag s = j': 1j,
+    'Complex s = -1 + j': -1 + 1j
+}
+
+plt.figure(figsize=(12, 8))
+
+for i, (label, s) in enumerate(s_values.items(), 1):
+    y = (np.exp(s * t) / s) * (np.exp(s * T) - np.exp(-s * T))
+    y_real = np.real(y)
+
+    plt.subplot(3, 1, i)
+    plt.plot(t, y_real, label=f'Re[{label}]', color='b')
+    plt.axhline(0, color='black', linewidth=0.5, linestyle='--')
+    plt.title(f'Convolution Output y(t) for {label}')
+    plt.xlabel('t')
+    plt.ylabel('Re[y(t)]')
+    plt.grid(True)
+    plt.legend()
+
+plt.tight_layout()
+plt.show()

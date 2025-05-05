@@ -1,0 +1,33 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import convolve
+
+
+omega = 2 * np.pi
+phi = 0
+tau0 = 2
+
+
+t = np.linspace(-10, 10, 4000)
+dt = t[1] - t[0]
+
+f = np.cos(omega * t + phi)
+
+
+T_values = [0.1, 1, 3.14, 10, 100]
+
+
+plt.figure(figsize=(12, 6))
+
+for T in T_values:
+    h = np.where((t >= tau0 - T) & (t <= tau0 + T), 1.0, 0.0)
+    y = convolve(f, h, mode='same') * dt
+    plt.plot(t, y, label=f'T = {T}')
+
+plt.title(r'Convolution of $f(t) = \cos(\omega t + \phi)$ with Shifted Rectangular Kernel')
+plt.xlabel('Time $t$')
+plt.ylabel('Convolution Output $y(t)$')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()

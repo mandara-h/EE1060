@@ -1,0 +1,32 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Time axis
+t = np.linspace(-10, 10, 2000)
+
+# Signal parameters
+omega = 1
+phi = np.pi / 4
+
+# Values of T to explore
+T_values = [0.1, 1, np.pi, 10, 100]
+colors = ['red', 'green', 'blue', 'orange', 'purple']
+
+# Plotting
+plt.figure(figsize=(12, 8))
+for i, T in enumerate(T_values):
+    y = (2 / omega) * np.cos(omega * t + phi) * np.sin(omega * T)
+    plt.plot(t, y, label=f'T = {T:.2f}', color=colors[i])
+
+# Original signal for reference
+f = np.cos(omega * t + phi)
+plt.plot(t, f, 'k--', linewidth=1, label='Original Signal (Cosine)')
+
+plt.title(r"Plot of $y(t) = \frac{2}{\omega} \cos(\omega t + \phi) \cdot \sin(\omega T)$")
+plt.xlabel('Time t')
+plt.ylabel('y(t)')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('fig1.png')
+plt.show()

@@ -1,0 +1,31 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import convolve
+
+S = 2
+tau0 = 2
+T = 3
+
+
+t = np.linspace(-20, 20, 8000)
+dt = t[1] - t[0]
+
+f = np.where((t >= -S) & (t <= S), 1.0, 0.0)
+
+
+h = np.where((t >= (tau0 - T)) & (t <= (tau0 + T)), 1.0, 0.0)
+
+y = convolve(f, h, mode='same') * dt
+
+
+plt.figure(figsize=(12, 6))
+plt.plot(t, f, label='f(t): Rectangular Pulse')
+plt.plot(t, h, label='h(t): Shifted Kernel')
+plt.plot(t, y, label='y(t) = f(t) * h(t)', linewidth=2)
+plt.title('Convolution of f(t) with Shifted Rectangular Kernel h(t)')
+plt.xlabel('Time t')
+plt.ylabel('Amplitude')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()

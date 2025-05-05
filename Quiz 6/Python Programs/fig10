@@ -1,0 +1,28 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def causal_convolution(t, S, T):
+    y = np.zeros_like(t)
+    for i, ti in enumerate(t):
+        a = ti - 2 * T
+        b = ti
+        left = max(a, -S)
+        right = min(b, S)
+        if left < right:
+            y[i] = right - left
+    return y
+
+S = 2
+T = 1
+t = np.linspace(-2, 6, 1000)
+y = causal_convolution(t, S, T)
+
+plt.figure(figsize=(8, 4))
+plt.plot(t, y, label=f"Causal Kernel, T = {T}", color='darkgreen')
+plt.title("Convolution y(t) with Causal Rectangular Kernel")
+plt.xlabel("t")
+plt.ylabel("y(t)")
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()

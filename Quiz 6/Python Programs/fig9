@@ -1,0 +1,32 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def rectangular_convolution(t, S, T):
+    y = np.zeros_like(t)
+    for i, ti in enumerate(t):
+        if ti < -(S + T) or ti > (S + T):
+            y[i] = 0
+        elif -(S + T) <= ti <= -(S - T):
+            y[i] = ti + S + T
+        elif -(S - T) <= ti <= (S - T):
+            y[i] = 2 * T
+        elif (S - T) <= ti <= (S + T):
+            y[i] = S + T - ti
+    return y
+
+S = 2
+T_values = [0.5, 1.0, 1.5]
+t = np.linspace(-6, 6, 1000)
+
+plt.figure(figsize=(8, 4))
+for T in T_values:
+    y = rectangular_convolution(t, S, T)
+    plt.plot(t, y, label=f"T = {T}")
+
+plt.title("Effect of Varying T on y(t)")
+plt.xlabel("t")
+plt.ylabel("y(t)")
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()

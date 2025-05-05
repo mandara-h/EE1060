@@ -1,0 +1,28 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import convolve
+
+t = np.linspace(0, 20, 10000)
+dt = t[1] - t[0]
+
+T = 2
+tau0 = 5
+h = np.where((t >= tau0 - T) & (t <= tau0 + T), 1.0, 0.0)
+
+s_values = [-1, 1j, -1 + 1j]
+labels = ["s = -1", "s = j", "s = -1 + j"]
+
+plt.figure(figsize=(10, 6))
+for s, label in zip(s_values, labels):
+    f = np.exp(s * t)
+    y = convolve(f, h, mode='same') * dt
+    plt.plot(t, np.real(y), label=f"Re({label})")
+    plt.plot(t, np.imag(y), '--', label=f"Im({label})")
+
+plt.title(r"Convolution of $f(t) = e^{st}$ with Shifted Kernel ($T = 2, \tau_0 = 5$)")
+plt.xlabel("Time t")
+plt.ylabel("Convolved Output")
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()

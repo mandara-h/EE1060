@@ -1,0 +1,39 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def sinc(x):
+    return np.sinc(x)  
+
+
+def compute_convolution(t, T, num_points=10000):
+    tau = np.linspace(t - T, t + T, num_points)
+    f_tau = sinc(tau)
+    y = np.trapz(f_tau, tau)
+    return y
+
+
+T_values = [0.1, 1, 2, 3.14, 10, 100]
+
+
+t_vals = np.linspace(-10, 10, 500)
+
+
+plt.figure(figsize=(10, 6))
+
+plt.plot(t_vals, sinc(t_vals), 'k--', linewidth=2, label='Original sinc(t)')
+
+
+for T in T_values:
+    y_vals = []
+    for t in t_vals:
+        y = compute_convolution(t, T)
+        y_vals.append(y)
+    plt.plot(t_vals, y_vals, label=f"T = {T}")
+
+plt.title("Convolution of sinc(t) with Rectangular Kernels for Different T")
+plt.xlabel("t")
+plt.ylabel("y(t)")
+plt.grid(True)
+plt.legend()
+plt.savefig('fig2.png')
+plt.show()
